@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "754038682829",
+    "project_id": "fir-login-cleanarch",
+    "storage_bucket": "fir-login-cleanarch.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754038682829:android:d403440cd2d461245da584",
+        "android_client_info": {
+          "package_name": "com.example.ai_weather"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkbJaerxFJrUrCk0ezWt49FDjumr0lJEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
