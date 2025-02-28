@@ -41,6 +41,13 @@ dependencies:
   firebase_auth:
   get_it: ^8.0.3
   bloc:
+  dio:
+  geolocator:
+  geocoding:
+
+  intl:
+  jiffy:
+  percent_indicator: ^4.2.4
 dev_dependencies:
   flutter_test:
     sdk: flutter

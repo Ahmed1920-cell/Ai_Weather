@@ -54,7 +54,12 @@ class FirebaseService{
       throw Exception("Try Again");
     }
   }
+  User? getUser()  {
+      return _auth.currentUser;
 
+      throw Exception("Try Again");
+
+  }
 
 
 }
