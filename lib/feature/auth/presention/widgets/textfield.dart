@@ -19,7 +19,7 @@ bool password;
         ),
         hintText: hint,
         labelText: label,
-          prefix: password?IconButton(onPressed:(){
+          suffix: password?IconButton(onPressed:(){
             BlocProvider.of<AuthCubit>(context).togglePasswordVisibility();
           } , icon: Icon(BlocProvider.of<AuthCubit>(context).prefix)):null
       ),

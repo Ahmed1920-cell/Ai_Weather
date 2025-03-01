@@ -23,7 +23,7 @@ bool signup;
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Logging in...')),
             );
-            await BlocProvider.of<AuthCubit>(context).login(email,password);}
+             await BlocProvider.of<AuthCubit>(context).login(email,password);}
             else{
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Signing Up...')),

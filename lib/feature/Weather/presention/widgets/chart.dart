@@ -4,23 +4,33 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import '../../../../core/assets/componant.dart';
 
 class Chart extends StatelessWidget {
-   Chart({super.key,this.data,this.value});
+   Chart({super.key,this.data,this.value,this.end=false,this.icon,this.color});
 var data;
 var value;
+var icon;
+var color;
+bool end;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text("$data",style: TextStyle(fontSize: 20),),
-        new CircularPercentIndicator(
-          progressColor:orange,
-          radius: 30.0,
-          lineWidth: 5.0,
-          percent: (value/100),
-          center: new Text("$value"),
-        )
+    return Container(
+      padding: EdgeInsets.all(7),
+      decoration:BoxDecoration(
+          border: !end?Border(right: BorderSide(color: Colors.black,width: 1)):null
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Icon(icon,color:color ,),
+              Text(" $data",style: TextStyle(fontSize: 15),),
+            ],
+          ),
+           SizedBox(height: 6,),
+           Text("$value",style: TextStyle(fontSize: 14),)
 
-      ],
+        ],
+      ),
     );
   }
 }

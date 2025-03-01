@@ -28,6 +28,7 @@ User? getuser(){
     try {
       emit(AuthLoading());
       final user = await loginUsecase.excute(email, password);
+      print(user);
       if (user != null) {
         emit(AuthSucces(user.toString()));
       } else {
@@ -41,6 +42,7 @@ User? getuser(){
     try {
       emit(AuthLoading());
       final user = await signupUsecase.excute(email, password);
+      print(user);
       if (user != null) {
         emit(AuthSucces(user.toString()));
       } else {

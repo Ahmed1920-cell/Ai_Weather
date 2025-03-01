@@ -82,7 +82,7 @@ class _sign_screenState extends State<sign_screen> {
         },
         child: SafeArea(
           child: Scaffold(
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.lightBlueAccent,
             body: Container(
               padding: EdgeInsets.all(30),
               alignment: Alignment.center,

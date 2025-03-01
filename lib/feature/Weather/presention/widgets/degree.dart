@@ -12,7 +12,7 @@ var degree;
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 20.0,right: 20.0),
-          child: Text("$degree C",style: TextStyle(fontSize: 50),),
+          child: Text("$degree",style: TextStyle(fontSize: 50),),
         ),
 
         Text("O",style: TextStyle(fontSize: size),)

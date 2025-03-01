@@ -10,7 +10,7 @@ class FirebaseService{
       UserCredential credential = await _auth
           .signInWithEmailAndPassword(
           email: email, password: password);
-      return credential.user!.email;
+      return credential;
     }on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-email') {
         throw Exception('Invalid email');
@@ -29,7 +29,7 @@ class FirebaseService{
     try {
       UserCredential credential = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      return credential.user!.email;
+      return credential;
     }on FirebaseAuthException catch (e){
       if (e.code == 'invalid-email') {
         throw Exception('Invalid email');

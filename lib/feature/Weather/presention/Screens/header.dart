@@ -12,17 +12,20 @@ String user;
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text("Hello",style: TextStyle(fontSize: size,color: orange,fontWeight: FontWeight.bold),),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(user,style: TextStyle(fontSize: size,color: Colors.black,fontWeight: FontWeight.bold),),
+            Text("Last Update : ${DateTime.now().hour}:${DateTime.now().minute}",style: TextStyle(fontSize: 14,color: Colors.black),),
+          ],
         ),
         Spacer(),
         Row(
           children: [
-            IconButton(onPressed: (){BlocProvider.of<WeatherCubit>(context).getweather() ;}, icon: Icon(Icons.refresh)),
+            IconButton(onPressed: (){BlocProvider.of<WeatherCubit>(context).getweather() ;}, icon: Icon(Icons.refresh,color: Colors.black,)),
             IconButton(onPressed: (){
               BlocProvider.of<AuthCubit>(context).logout();
-            }, icon: Icon(Icons.logout)),
+            }, icon: Icon(Icons.logout,color: Colors.black,)),
           ],
         )
       ],
