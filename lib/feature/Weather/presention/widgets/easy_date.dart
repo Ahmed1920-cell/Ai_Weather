@@ -18,7 +18,7 @@ class EasyDate extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(8),
       alignment: Alignment.center,
-      height: MediaQuery.sizeOf(context).height * 60/776,
+      height: MediaQuery.sizeOf(context).height * 60 / 776,
       width: MediaQuery.sizeOf(context).width * 50/360,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),

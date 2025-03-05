@@ -22,7 +22,14 @@ String user;
         Spacer(),
         Row(
           children: [
-            IconButton(onPressed: (){BlocProvider.of<WeatherCubit>(context).getweather() ;}, icon: Icon(Icons.refresh,color: Colors.black,)),
+            IconButton(
+                onPressed: () {
+                  BlocProvider.of<WeatherCubit>(context).getweather();
+                },
+                icon: Icon(
+                  Icons.refresh,
+                  color: Colors.black,
+                )),
             IconButton(onPressed: (){
               BlocProvider.of<AuthCubit>(context).logout();
             }, icon: Icon(Icons.logout,color: Colors.black,)),
