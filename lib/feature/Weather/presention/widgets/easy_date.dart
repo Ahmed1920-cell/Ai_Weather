@@ -1,4 +1,5 @@
 
+import 'package:ai_weather/core/assets/componant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
@@ -17,9 +18,11 @@ class EasyDate extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(8),
       alignment: Alignment.center,
+      height: MediaQuery.sizeOf(context).height * 60 / 776,
+      width: MediaQuery.sizeOf(context).width * 50/360,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: DateFormat('yyyy-MM-dd').format(date_weather)==date?Colors.white:Colors.orange,
+        color: DateFormat('yyyy-MM-dd').format(date_weather)==date?Colors.white:back_color,
       ),
       child: InkWell(
         onTap: (){

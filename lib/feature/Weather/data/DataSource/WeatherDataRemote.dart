@@ -5,6 +5,7 @@ import 'package:ai_weather/feature/Weather/data/DTO/WeatherModel.dart';
 abstract class BaseWeatherDataRemote{
   Future get();
   Future update(var date);
+  Future<List> predict(List<int> features);
 }
 class WeatherDataRemote extends BaseWeatherDataRemote{
   WeatherDio weatherDio;
@@ -23,5 +24,12 @@ class WeatherDataRemote extends BaseWeatherDataRemote{
     var response=await weatherDio.update(date);
     WeatherModel weather=WeatherModel.fromJson(response);
     return weather;
+  }
+
+  @override
+  Future<List> predict(List<int> features) async{
+    var response=await weatherDio.getPrediction(features);
+    return response;
+
   }
 }

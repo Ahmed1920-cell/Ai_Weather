@@ -13,4 +13,9 @@ class WeatherRepoImp extends WeatherRepo{
   Future update(var date) async{
     return await baseWeatherDataRemote.update(date);
   }
+
+  @override
+  Future<List> predict(List<int> features) async{
+    return await baseWeatherDataRemote.predict(features);
+  }
 }

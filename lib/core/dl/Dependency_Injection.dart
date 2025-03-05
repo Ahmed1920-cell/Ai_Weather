@@ -4,6 +4,7 @@ import 'package:ai_weather/feature/Weather/data/DataSource/WeatherDataRemote.dar
 import 'package:ai_weather/feature/Weather/data/repositry/WeatherRepoImp.dart';
 import 'package:ai_weather/feature/Weather/domain/repositry/WeatherRepo.dart';
 import 'package:ai_weather/feature/Weather/domain/usecase/get_weather_usecase.dart';
+import 'package:ai_weather/feature/Weather/domain/usecase/predict_usecase.dart';
 import 'package:ai_weather/feature/Weather/domain/usecase/update_weather_usecase.dart';
 import 'package:ai_weather/feature/Weather/presention/Bloc/WeatherBloc.dart';
 import 'package:ai_weather/feature/auth/domain/usecase/getUser_usecase.dart';
@@ -42,5 +43,6 @@ void intl() {
   sl.registerLazySingleton<WeatherRepo>(() =>WeatherRepoImp(sl<WeatherDataRemote>()));
   sl.registerLazySingleton(() =>GetWeatherUsecase(sl<WeatherRepo>()));
   sl.registerLazySingleton(() =>UpdateWeatherUsecase(sl<WeatherRepo>()));
-  sl.registerFactory(() =>WeatherCubit(sl<GetWeatherUsecase>(),sl<UpdateWeatherUsecase>(),sl<location>()));
+  sl.registerLazySingleton(() =>PredictUsecase(sl<WeatherRepo>()));
+  sl.registerFactory(() =>WeatherCubit(sl<GetWeatherUsecase>(),sl<UpdateWeatherUsecase>(),sl<PredictUsecase>()));
 }

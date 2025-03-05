@@ -58,7 +58,7 @@ IconData icon=Icons.visibility_off;
 
             return SafeArea(
               child: Scaffold(
-                backgroundColor: Colors.orange,
+                backgroundColor: Colors.lightBlueAccent,
                 body: Container(
                   padding: EdgeInsets.all(30),
                   alignment: Alignment.center,

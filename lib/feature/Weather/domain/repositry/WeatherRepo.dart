@@ -3,4 +3,5 @@ abstract class WeatherRepo{
 
   Future update(var date);
 
+  Future<List> predict(List<int> features);
 }
